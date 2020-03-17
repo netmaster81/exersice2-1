@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,8 +20,15 @@ namespace exersice2_1
             Mainmenu MM = new Mainmenu();
             MM.TaskPrintMenu();
             MM.Menu();
+            Console.ReadLine();
+            Console.ReadLine();
+            Console.ReadLine();
+            Console.ReadLine();
+            Console.ReadLine();
+            Console.Write("Hej");
+            //Console.ReadLine();
+            //Console.ReadLine();
             //Console.ReadLine();
         }
     }
 }
-

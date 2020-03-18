@@ -8,9 +8,9 @@ namespace exersice2_1
 {
     public class CinemaTicket
     {
-        private int Und20 = 80;
-        private int Over64 = 90;
-        private int StanderPrice = 120;
+        private readonly int Und20 = 80;
+        private readonly int Over64 = 90;
+        private readonly int StanderPrice = 120;
         private int NumberOfAttend;
         private List<int> Ages;
         public CinemaTicket()
@@ -26,13 +26,13 @@ namespace exersice2_1
             }
             if(age >=5 && age<20)
             { 
-                return 80;
+                return Und20;
             }
             if (age >= 20 && age < 64)
             {
-                return 120;
+                return StanderPrice;
             }
-            else return 90;
+            else return Over64;
             
         }
         private int TotalPrice()// return the total price of tickets

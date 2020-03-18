@@ -8,9 +8,31 @@ namespace exersice2_1
 {
     public class ThirdWord
     {
-        private string Text;// input Text
+        public string Text;// input Text
+        public string word;
         public ThirdWord()
         {
+
+        }
+        public ThirdWord(string text)
+        {
+            Text = text;
+        }
+        public string ThirdwordF(string text)
+        {
+            int thirdwordindicator = 0;
+            string[] words = text.Split(' ');
+            foreach (string word in words)
+            {
+                
+                if (word.Length != 0) thirdwordindicator++;
+                if (thirdwordindicator == 3)
+                {
+                    return word;
+                }
+              
+            }
+            return "Enter Three words to Run this program";
 
         }
 

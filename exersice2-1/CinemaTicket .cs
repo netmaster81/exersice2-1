@@ -12,30 +12,34 @@ namespace exersice2_1
         private readonly int Over64 = 90;
         private readonly int StanderPrice = 120;
         private int NumberOfAttend;
-        private List<int> Ages;
+        public List<int> Ages;
         public CinemaTicket()
         {
             Ages = new List<int>(NumberOfAttend);
         }
-
-        private int TicketPrice(int age)// return the value of ticket depending on age
+        public CinemaTicket(int numberofattend): this()
         {
-            if (age<5 || age>100)// free ticket for those ages
+            NumberOfAttend = numberofattend;     
+        }
+        
+        public int TicketPrice(int age)// return the value of ticket depending on age
+        {
+            if (age < 5 | age > 100)// free ticket for those ages
             {
                 return 0;
             }
-            if(age >=5 && age<20)
+            if(age >=5 & age<20)
             { 
                 return Und20;
             }
-            if (age >= 20 && age < 64)
+            if (age >= 20 & age < 64)
             {
                 return StanderPrice;
             }
             else return Over64;
             
         }
-        private int TotalPrice()// return the total price of tickets
+        public int TotalPrice()// return the total price of tickets
         {
             int sum=0;
             for (int i=0;i<NumberOfAttend;i++)
